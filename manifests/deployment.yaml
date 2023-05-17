@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: daddymundele
+  labels:
+    app: daddymundele
+  namespace: namespace-workflow-1684335332174
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: daddymundele
+  template:
+    metadata:
+      labels:
+        app: daddymundele
+    spec:
+      containers:
+        - name: daddymundele
+          image: acrworkflow1684335332174.azurecr.io/image-workflow-1684335332174:latest
+          ports:
+            - containerPort: 3000
