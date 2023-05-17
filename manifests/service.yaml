@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: daddymundele
+  namespace: namespace-workflow-1684335332174
+spec:
+  type: LoadBalancer
+  selector:
+    app: daddymundele
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
